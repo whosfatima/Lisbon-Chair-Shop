@@ -20,7 +20,9 @@ A simple and stylish furniture shop website showcasing chairs, built using moder
 2. Open the `index.html` file in your browser.
 
 ## 📸 Preview
-![Project Screenshot](#) <!-- Add a link or upload an image here -->
+[Live Demo](https://whosfatima.github.io/Lisbon-Chair-Shop/)  
+
+![Project Screenshot](./img/Demo.png)
 
 ## 🤝 Contribution
 Feel free to fork and improve the project. Pull requests are welcome!

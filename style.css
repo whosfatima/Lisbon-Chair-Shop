@@ -6,7 +6,7 @@
 }
 
 body {
-  font-family: "poppins";
+  font-family: "poppins", sans-serif;
   transition: 1s all ease-in-out;
 }
 
