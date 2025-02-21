@@ -22,41 +22,7 @@ $utulities: (
         "5": $base-padding * 5,
     )
   )
-);
-
-// @each $property, $map in $utulities {
-//   $prefix: map-get($map, "prefix");
-//   $values: map-get($map, "values");
-//   @each $key, $val in $utulities {
-//     @if ($key == "default") {
-//       .#{$prefix} {
-//         #{$property}: $val;
-//       }
-//     }
-//      @else {
-//         .#{$prefix}-#{$key} {
-//             #{$property}: $val;
-//         }
-//     }
-//   }
-// }
-
-// @each $property, $map in $utulities {
-//     $prefix: map-get($map, 'prefix');
-//     $values: map-get($map, 'values');
-
-//     @each $key, $val in $values{
-//         @if ($key == 'default') {
-//             .#{$prefix} {
-//                 #{$property} : $val;
-//             }
-//         }  @else {
-//             .#{$prefix}-#{$key} {
-//                 #{$property}: $val;
-//             }
-//         }
-//     }
-// }
+); 
 
 @each $proprty, $map in $utulities {
   $prefix: map-get($map, "prefix");
