@@ -21,8 +21,55 @@ $utulities: (
         "4": $base-padding * 4,
         "5": $base-padding * 5,
     )
-  )
+  ),
+
+  'padding-bottom': (
+    'prefix': 'pb',
+    'values': (
+      "0": $base-padding,
+      "1": $base-padding * 1,
+      "2": $base-padding * 2,
+      "3": $base-padding * 3,
+      "4": $base-padding * 4,
+      "5": $base-padding * 5,
+    )
+  ),
+  'padding-left': (
+    'prefix': 'pl',
+    'values': (
+      "0": $base-padding,
+      "1": $base-padding * 1,
+      "2": $base-padding * 2,
+      "3": $base-padding * 3,
+      "4": $base-padding * 4,
+      "5": $base-padding * 5,
+    )
+  ),
+  'padding-right': (
+    'prefix': 'pr',
+    'values': (
+      "0": $base-padding,
+      "1": $base-padding * 1,
+      "2": $base-padding * 2,
+      "3": $base-padding * 3,
+      "4": $base-padding * 4,
+      "5": $base-padding * 5,
+    )
+  ), 
+
+  "display": (
+    "prefix": "display",
+    "values": (
+    "n": none,
+    "b": block,
+    "f": flex,
+    "i": inline,
+    "i-b": inline-block
+    )
+),
 ); 
+
+
 
 @each $proprty, $map in $utulities {
   $prefix: map-get($map, "prefix");
