@@ -3,10 +3,16 @@ header {
   align-items: center;
   flex-flow: row wrap;
   height: 70px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  backdrop-filter: blur(5px);
+
   h1 {
     cursor: pointer;
     &:hover {
-      color: map-get($colors, 'white' );
+      color: map-get($colors, "white");
     }
   }
   ul {
@@ -16,15 +22,12 @@ header {
         font-size: 18px;
         color: map-get($colors, secondary);
         &:hover {
-          color: map-get($colors, 'white' );
+          color: map-get($colors, "white");
         }
       }
     }
   }
 }
-
-
-
 
 // the container start ...
 .container {
@@ -32,7 +35,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 20px 20px;
+    margin: 50px 20px;
     .left {
       width: 40%;
       h1 {
@@ -48,7 +51,7 @@ header {
         background-color: map-get($colors, prymary);
         padding: 10px 20px;
         border-radius: 30px;
-        color: map-get($colors, 'white' );
+        color: map-get($colors, "white");
         &:hover {
           background-color: #0aa173;
         }
@@ -56,7 +59,7 @@ header {
     }
     .right {
       width: 40%;
-
+      margin: 80px 0;
       img {
         width: 100%;
         border-radius: 10px;
@@ -69,7 +72,6 @@ header {
     margin: 20px 20px;
   }
 
-
   .row {
     padding: 50px;
     margin: 20px 20px;
@@ -78,123 +80,111 @@ header {
       width: 50%;
       padding: 20px;
       text-align: left;
-       i {
-        color: map-get($colors, prymary );
+      i {
+        color: map-get($colors, prymary);
         font-size: $font-size-lg * 1.2;
-        // @extend .pt-5;
         padding-bottom: $base-padding + 1;
-       }
-       h2 {
-        padding-bottom: $base-padding
-       }
-    }
-  }
-.card {
-  // display: flex;
-  margin: 40px auto;
-  // justify-content: center;
-  align-items: center;
-  padding: 20px 40px;
-  border-radius: $base-border-radius;
-  max-width: 900px;
-  img {
-    width: 200px;
-    border-radius: 10px;
-    margin-right: 70px;
-  }
-  .card-content {
-    h2 {
-      font-size: 20px;
-      font-weight: bold;
-    }
-    p {
-      font-size: 14px;
-      font-style: italic;
-    }
-    .author {
-      margin-top: 10px;
-      font-weight: bold;
-    }
-  }
-}
-.main {
-  // align-items: center;
-  // display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 0px auto;
-  max-width: 900px;
-  div {
-    // border: 1px solid #000;
-     padding: 20px ;
-    //  margin: 10px;
-.chairs {
-  // border: 1px solid #000;
-  border-radius: 30px 30px 0px 0px;
-  padding: 0px;
-  width: 100%;
-  box-shadow: $base-box-shadow;
-   
-    img{
-      overflow: hidden;
-      width: 250px;
-      border-radius: 10px 10px 0px 0px;
-      height: auto;
-    }
-}
-
-    .deteals {
-      h2 {
-        // font-size: 20px;
-        padding: 10px;
-        color: map-get($colors, secondary );
       }
-      ul {
-        li {
-          padding: 10px;
-          color: map-get($colors, secondary );
-          i {
-            color: map-get($colors ,prymary);
-            font-size: 20px;
-            padding-right: 10px;
-            transition: .1s ease-in-out ;
+      h2 {
+        padding-bottom: $base-padding;
+      }
+    }
+  }
+  .card {
+    margin: 40px auto;
+    align-items: center;
+    padding: 20px 40px;
+    border-radius: $base-border-radius;
+    max-width: 900px;
+    img {
+      width: 200px;
+      border-radius: 10px;
+      margin-right: 70px;
+    }
+    .card-content {
+      h2 {
+        font-size: 20px;
+        font-weight: bold;
+      }
+      p {
+        font-size: 14px;
+        font-style: italic;
+      }
+      .author {
+        margin-top: 10px;
+        font-weight: bold;
+      }
+    }
+  }
+  .main {
+    justify-content: center;
+    align-items: center;
+    margin: 0px auto;
+    max-width: 900px;
+    div {
+      padding: 20px;
+      .chairs {
+        border-radius: 30px 30px 0px 0px;
+        padding: 0px;
+        width: 100%;
+        box-shadow: $base-box-shadow;
 
+        img {
+          overflow: hidden;
+          width: 250px;
+          border-radius: 10px 10px 0px 0px;
+          height: auto;
+        }
+      }
+
+      .deteals {
+        h2 {
+          padding: 10px;
+          color: map-get($colors, secondary);
+        }
+        ul {
+          li {
+            padding: 10px;
+            color: map-get($colors, secondary);
+            i {
+              color: map-get($colors, prymary);
+              font-size: 20px;
+              padding-right: 10px;
+              transition: 0.1s ease-in-out;
+
+              &:hover {
+                font-size: 24px;
+                transition: 0.3s ease-in-out;
+              }
+            }
+          }
+        }
+        .low {
+          width: 100%;
+          padding: 0px;
+          justify-content: space-between;
+          align-items: center;
+          margin-top: 30px;
+
+          p {
+            color: map-get($colors, secondary);
+            margin-right: 0px;
+          }
+          button {
+            all: unset;
+            background-color: map-get($colors, prymary);
+            padding: 5px 12px;
+            cursor: pointer;
+            border-radius: 20px;
+            color: #fff;
             &:hover {
-              font-size: 24px;
-              transition: .3s ease-in-out ;
+              background-color: #0aa173;
             }
           }
         }
       }
-      .low {
-        width: 100%;
-        // margin-bottom: 60px;
-        padding: 0px;
-        // display: flex;
-        justify-content: space-between;
-        align-items: center;
-        margin-top: 30px;
-
-        // background-color: #65aa95;
-        p {
-          color: map-get($colors, secondary);
-          margin-right:0px ;
-        }
-        button {
-          all: unset;
-          background-color: map-get($colors, prymary );
-          padding: 5px 12px;
-          cursor: pointer;
-          border-radius: 20px;
-          color: #fff;
-        &:hover {
-          background-color: #0aa173;
-        }
-        }
-      }
     }
   }
-}
 }
 footer {
   margin-top: 60px;
